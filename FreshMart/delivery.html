@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fresh Mart — Delivery</title>
+ 
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="delivery-header">
+    <a href="index.html" class="logo-link">
+      <img src="/images/logo.png" alt="Fresh Mart Logo" class="logo" />
+    </a>
+    <a href="index.html" class="btn back-btn">← Back to Home</a>
+  </header>
+
+  <!-- MAIN DELIVERY FORM -->
+  <main class="delivery-main">
+    <form id="delivery-form" class="delivery-form" novalidate>
+      <fieldset>
+        <legend>Recipient Information</legend>
+        <div class="form-row">
+          <label>
+            First Name *
+            <input type="text" name="first-name" id="first-name" required />
+          </label>
+          <label>
+            Last Name *
+            <input type="text" name="last-name" id="last-name" required />
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            Phone Number *
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              pattern="\d{8,11}"
+              required
+            />
+          </label>
+          <label>
+            Email Address *
+            <input type="email" name="email" id="email" required />
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Delivery Address</legend>
+        <div class="form-row">
+          <label>
+            Street Address *
+            <input type="text" name="street" id="street" required />
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            City *
+            <input type="text" name="city" id="city" required />
+          </label>
+          <label>
+            State/Territory *
+            <select name="state" id="state" required>
+              <option value="">Select…</option>
+              <option>NSW</option>
+              <option>VIC</option>
+              <option>QLD</option>
+              <option>WA</option>
+              <option>SA</option>
+              <option>TAS</option>
+              <option>ACT</option>
+              <option>NT</option>
+              <option>Others</option>
+            </select>
+          </label>
+          <label>
+            Postcode *
+            <input
+              type="text"
+              name="postcode"
+              id="postcode"
+              pattern="\d{4}"
+              required
+            />
+          </label>
+        </div>
+      </fieldset>
+
+      <button
+        type="submit"
+        id="submit-order"
+        class="btn submit-btn disabled"
+        disabled
+      >
+        Submit Order
+      </button>
+    </form>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Fresh Mart</p>
+  </footer>
+
+  
+  <script src="/script.js"></script>
+</body>
+</html>
